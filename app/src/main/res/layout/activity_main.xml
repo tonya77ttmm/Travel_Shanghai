@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activities.MapActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fitsSystemWindows="true"
+        android:layout_weight="1">
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"/>
+
+        <RelativeLayout
+            android:id="@+id/road_sign_box"
+            android:fitsSystemWindows="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="80dp"
+            android:background="#fefefe"
+            android:padding="7dp">
+
+            <EditText
+                android:id="@+id/road_sign_my_location"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:drawableLeft="@drawable/mylocation_icon"
+                android:drawableBottom="@drawable/line_et"
+                android:drawablePadding="10dp"
+                android:singleLine="true"
+                android:hint="输入起点"
+                android:textColor="#111"
+                android:textCursorDrawable="@drawable/cursor_et"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/road_sign_target_location"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/road_sign_my_location"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:drawableLeft="@drawable/targetlocation_icon"
+                android:drawableBottom="@drawable/line_et"
+                android:drawablePadding="10dp"
+                android:hint="输入终点"
+                android:singleLine="true"
+                android:textColor="#111"
+                android:textCursorDrawable="@drawable/cursor_et"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/road_sign_start_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/go" />
+
+            <TextView
+                android:id="@+id/road_sign_go"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="55dp"
+                android:layout_marginRight="13dp"
+                android:text="Go"
+                android:textColor="#555"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="150dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/function_item_bg_selector"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/photo3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="拍照识别"
+                android:textColor="#444"
+                android:textSize="9sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="3dp"
+                android:background="#ddd" />
+
+            <ImageView
+                android:id="@+id/iv_road_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:src="@drawable/road3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="路线规划"
+                android:textColor="#444"
+                android:textSize="9sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="3dp"
+                android:background="#ddd" />
+
+            <ImageView
+                android:id="@+id/iv_feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:src="@drawable/feedback3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="景区反馈"
+                android:textColor="#444"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/indoor_position_box"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="400dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/function_item_bg_selector"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_indoor_position"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:src="@drawable/senic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="景物推送"
+                android:textColor="#444"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
