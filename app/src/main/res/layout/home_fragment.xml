@@ -91,12 +91,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="20dp">
+                android:padding="10dp">
 
                 <TextView
                     android:id="@+id/weather_home_tv"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="80dp"
                     android:layout_weight="1"
                     android:drawableTop="@drawable/weather_logo"
                     android:gravity="center"
@@ -106,19 +106,19 @@
 
                 <TextView
                     android:id="@+id/translation_home_tv"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="38dp"
+                    android:layout_height="145dp"
                     android:layout_weight="1"
-                    android:drawableTop="@drawable/translation_logo"
+                    android:drawableTop="@drawable/start"
                     android:gravity="center"
-                    android:text="在线翻译"
+                    android:text="路线规划"
                     android:textColor="#333"
-                    android:textSize="14sp" />
+                    android:textSize="30sp" />
 
                 <TextView
                     android:id="@+id/wc_home_tv"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="80dp"
                     android:layout_weight="1"
                     android:drawableTop="@drawable/wc_logo"
                     android:gravity="center"

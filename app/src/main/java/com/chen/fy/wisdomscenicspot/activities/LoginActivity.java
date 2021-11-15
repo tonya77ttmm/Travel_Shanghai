@@ -69,6 +69,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String password;
         userId = et_userId_login.getText().toString();
         password = et_password_login.getText().toString();
+        //后台识别的管理员登录
+        if(userId.equals("木客") && password.equals("A1842"))
+        {
+            //
+
+
+
+
+        }
         //用户名存在且密码与用户名对应
         if (LoginRegisterUtils.userExisted(userId, 1) && LoginRegisterUtils.passwordCorrected(userId, password, 1)) {
             Toast.makeText(LoginActivity.this, "登入成功!", Toast.LENGTH_SHORT).show();
