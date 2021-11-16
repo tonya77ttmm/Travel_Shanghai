@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="groups">
+        <item>景点类型</item>
+        <item>旅游伴侣</item>
+        <item>路线偏好</item>
+        <item>提交时间</item>
+    </string-array>
+
+    <string-array name="tianlongbabu">
+        <item>自然景物</item>
+        <item>电竞娱乐</item>
+        <item>人文历史</item>
+        <item>电影音乐</item>
+        <item>餐饮美食</item>
+        <item>红色旋律</item>
+        <item>逛街购物</item>
+        <item>特色文化</item>
+
+    </string-array>
+
+    <string-array name="tianlongbabu_detail">
+        <item>降龙十八掌,打狗棒法,龙爪手</item>
+        <item>凌波微步,六脉神剑</item>
+        <item>北冥神功,小无相功,天山折梅手,天山六阳掌</item>
+        <item>凌波微步,六脉神剑</item>
+        <item>凌波微步,六脉神剑</item>
+        <item>凌波微步,六脉神剑</item>
+        <item>凌波微步,六脉神剑</item>
+        <item>凌波微步,六脉神剑</item>
+    </string-array>
+
+    <string-array name="shediaoyingxiongzhuan">
+        <item>长辈</item>
+        <item>家庭</item>
+        <item>配偶</item>
+        <item>孩子</item>
+        <item>男/女朋友</item>
+        <item>朋友、同学</item>
+    </string-array>
+
+    <string-array name="shediaoyingxiongzhuan_detail">
+        <item>降龙十八掌,九阴真经,天罡北斗阵,双手互搏,空明拳</item>
+        <item>碧波掌法,落英神剑掌,玉箫剑法,兰花拂穴手</item>
+        <item>先天功,金雁功,全真剑法,一剑化三清</item>
+        <item>桃花影落飞神剑，碧海潮生按玉箫</item>
+        <item>蛤蟆功,瞬息千里,神驼雪山掌,透骨打穴法</item>
+        <item>一阳指,先天功</item>
+
+    </string-array>
+
+    <string-array name="shendiaoxialv">
+        <item>景点路程更短</item>
+        <item>景点热度更高</item>
+        <item>景点人流量小</item>
+        <item>景点价格更低</item>
+        <item>我们为您选择</item>
+
+    </string-array>
+
+    <string-array name="shendiaoxialv_detail">
+        <item>姓杨名过字改之,黯然销魂掌,玉女素心剑法,全真剑法,蛤蟆功</item>
+        <item>玉女素心剑法,古墓派轻功,金铃锁、淑女剑、玉蜂针、白金丝掌套</item>
+        <item>凌波微步,六脉神剑</item>
+        <item>凌波微步,六脉神剑</item>
+        <item>凌波微步,六脉神剑</item>
+    </string-array>
+
+    <string-array name="tijiaoshijian">
+        <item>半天</item>
+        <item>一天</item>
+
+    </string-array>
+
+    <string-array name="shenoxialv_detail">
+        <item>姓杨名过字改之,黯然销魂掌,玉女素心剑法,全真剑法,蛤蟆功</item>
+        <item>玉女素心剑法,古墓派轻功,金铃锁、淑女剑、玉蜂针、白金丝掌套</item>
+    </string-array>
+
+
+
+
+
+</resources>

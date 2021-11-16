@@ -1,5 +1,6 @@
 package com.chen.fy.wisdomscenicspot.fragment;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -17,9 +18,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.chen.fy.wisdomscenicspot.R;
+import com.chen.fy.wisdomscenicspot.activities.HomeActivity;
+import com.chen.fy.wisdomscenicspot.activities.MainActivity;
 import com.chen.fy.wisdomscenicspot.activities.MapActivity;
 import com.chen.fy.wisdomscenicspot.activities.SearchActivity;
 import com.chen.fy.wisdomscenicspot.adapter.ItemClickListener;
@@ -284,14 +288,27 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
                 break;
             case R.id.wc_home_tv:
                 break;
-            case R.id.translation_home_tv:
-                break;
+
             case R.id.search_home:
                 if(getActivity()!=null) {
                     Intent intent = new Intent(getActivity(), SearchActivity.class);
                     startActivity(intent);
                 }
                 break;
+
+            case R.id.translation_home_tv:
+                if(getActivity()!=null) {
+                    Intent intent = new Intent(getActivity(), HomeActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                   // startActivity(intent);
+                    if ((intent.getFlags()&Intent.FLAG_ACTIVITY_NEW_TASK) == 0) {
+                        Toast.makeText(getActivity(), "chucuole", Toast.LENGTH_SHORT).show();
+                    }else {
+                       startActivity(intent);
+                    }
+                }
+                break;
+
         }
     }
 
