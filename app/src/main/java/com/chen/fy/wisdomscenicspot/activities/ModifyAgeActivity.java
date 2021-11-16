@@ -21,9 +21,9 @@ import org.litepal.LitePal;
 
 import java.util.List;
 
-public class ModifyNameActivity extends AppCompatActivity {
+public class ModifyAgeActivity extends AppCompatActivity {
 
-    private EditText modify_name_et;
+    private EditText modify_age_et;
     /**
      * 当前用户登入的账号
      */
@@ -32,7 +32,7 @@ public class ModifyNameActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.modify_name_layout);
+        setContentView(R.layout.modify_age_layout);
 
         //初始化View
         initView();
@@ -45,11 +45,11 @@ public class ModifyNameActivity extends AppCompatActivity {
      */
     private void initView() {
         //设置toolbar
-        Toolbar toolbar = findViewById(R.id.toolbar_modify_name);
+        Toolbar toolbar = findViewById(R.id.toolbar_modify_age);
         setSupportActionBar(toolbar);
 
-        modify_name_et = findViewById(R.id.modify_name_et);
-        LoginRegisterUtils.setEditTextInhibitInputSpace(modify_name_et);
+        modify_age_et = findViewById(R.id.modify_age_et);
+        LoginRegisterUtils.setEditTextInhibitInputSpace(modify_age_et);
 
         //自动弹出输入法
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
@@ -88,23 +88,23 @@ public class ModifyNameActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.modify_save:
-                String name = modify_name_et.getText().toString();
-                if (!name.isEmpty()) {
+                String age = modify_age_et.getText().toString();
+                //Toast.makeText(this,age,Toast.LENGTH_LONG).show();
+                if (!age.isEmpty()) {
                     List<Visitor> visitors = LitePal.where("userId = ?", userId).find(Visitor.class);
                     for (Visitor visitor : visitors) {
-                        visitor.setUserName(name);
-                       boolean flag=visitor.save();
+                        visitor.setAge(age);
+                        boolean flag=visitor.save();
                         if (flag)
                         {Toast.makeText(this,"成功",Toast.LENGTH_LONG).show();}
                         else
                         {
                             Toast.makeText(this,"失败",Toast.LENGTH_LONG).show();
                         }
-
                     }
                     finish();
                 } else {
-                    Toast.makeText(this, "昵称不能为空", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "年龄不能为空", Toast.LENGTH_SHORT).show();
                 }
                 break;
         }
