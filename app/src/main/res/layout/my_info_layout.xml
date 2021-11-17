@@ -119,7 +119,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="账号"
+                android:text="年龄"
                 android:textColor="#666"
                 android:textSize="17sp" />
 
@@ -142,7 +142,7 @@
 
         </LinearLayout>
 
-        <!--手机号-->
+        <!--性别-->
         <LinearLayout
             android:id="@+id/phone_my_info_box"
             android:layout_width="match_parent"
@@ -157,7 +157,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="手机号"
+                android:text="性别"
                 android:textColor="#666"
                 android:textSize="17sp" />
 

@@ -25,6 +25,30 @@ public class Visitor extends LitePalSupport{
      * 手机号码
      */
     private String phone;
+    private String gender;
+    private String age;
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+
+
+
+
 
     public int getId() {
         return id;

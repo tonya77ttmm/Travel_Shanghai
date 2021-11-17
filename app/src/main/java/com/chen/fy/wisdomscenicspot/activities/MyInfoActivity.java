@@ -172,8 +172,8 @@ public class MyInfoActivity extends TakePhotoActivity implements View.OnClickLis
         List<Visitor> visitors = LitePal.where("userId = ?", userId).find(Visitor.class);
         for (Visitor visitor : visitors) {
             name_my_info_tv.setText(visitor.getUserName());
-            id_my_info_tv.setText(visitor.getUserId());
-            phone_my_info_tv.setText(visitor.getPhone());
+            id_my_info_tv.setText(visitor.getAge());
+            phone_my_info_tv.setText(visitor.getGender());
         }
     }
 
@@ -203,11 +203,14 @@ public class MyInfoActivity extends TakePhotoActivity implements View.OnClickLis
                 intent.putExtra("userId",userId);
                 startActivity(intent);
                 break;
-            case R.id.id_my_info_box:
-                Toast.makeText(this, "账号", Toast.LENGTH_SHORT).show();
+            case R.id.id_my_info_box:          //点击年龄，跳转修改年龄界面
+                intent = new Intent(this, ModifyAgeActivity.class);
+                intent.putExtra("userId",userId);
+                startActivity(intent);
+                //Toast.makeText(this, "年龄", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.phone_my_info_box:        //点击手机号码,跳转修改手机号码界面
-                intent = new Intent(this, ModifyPhotoActivity.class);
+            case R.id.phone_my_info_box:        //点击性别,跳转修改性别界面
+                intent = new Intent(this, ModifyGenderActivity.class);
                 intent.putExtra("userId",userId);
                 startActivity(intent);
                 break;
