@@ -35,7 +35,9 @@
             android:exported="false" />
         <activity
             android:name=".activities.MainActivity"
-            android:theme="@style/MyTheme">
+            android:theme="@style/MyTheme"
+            android:launchMode="singleTask"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

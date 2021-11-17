@@ -243,11 +243,11 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/item_selector"
             android:layout_marginBottom="10dp"
+            android:background="@drawable/item_selector"
             android:text="退出当前账号"
             android:textColor="#ff0000"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
     </RelativeLayout>
 
