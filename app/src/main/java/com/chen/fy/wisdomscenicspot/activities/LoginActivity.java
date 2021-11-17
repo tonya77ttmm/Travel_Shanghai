@@ -128,7 +128,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             Toast.makeText(MyApplication.getContext(), "登入出错!", Toast.LENGTH_SHORT).show();
         }
     }
-
+//
 
     /**
      * 保存登入状态

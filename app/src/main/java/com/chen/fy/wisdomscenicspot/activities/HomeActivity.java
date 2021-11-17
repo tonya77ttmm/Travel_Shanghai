@@ -9,6 +9,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -110,7 +111,12 @@ public class HomeActivity extends AppCompatActivity implements OnChildClickListe
         switch (item.getItemId()) {
 
             case R.id.submit:
-                Toast.makeText(this, "提交成功", Toast.LENGTH_SHORT).show();
+               Toast.makeText(this, "提交成功", Toast.LENGTH_SHORT).show();
+                Intent intent1 = new Intent(this, PlanTravelRoute.class);
+                startActivity(intent1);
+                PlanTravelRoute Plan = null;
+                Plan.line(1);
+
                 finish();
                 return true;
             default:

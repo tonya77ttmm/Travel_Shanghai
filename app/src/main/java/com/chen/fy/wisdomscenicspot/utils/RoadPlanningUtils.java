@@ -12,8 +12,8 @@ import java.util.List;
  */
 public class RoadPlanningUtils {
 
-    //1 醉乡-->普贤塔
-    public static final int ROAD_1 = 1;     // 途经普贤塔
+    //1 一日游
+    public static final int ROAD_1 = 1;     // 东方明珠广播电视塔
     public static final int ROAD_2 = 2;     // 途经象眼岩
     public static final int ROAD_3 = 3;     // 途经桂林抗战遗址
 
