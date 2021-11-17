@@ -56,7 +56,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="404dp"
         android:layout_marginTop="315dp"
         android:orientation="vertical">
 
@@ -90,27 +90,50 @@
             android:inputType="textPassword"
             android:textCursorDrawable="@drawable/cursor_et" />
 
+        <TextView
+            android:id="@+id/register_login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="230dp"
+            android:layout_marginTop="20dp"
+            android:text="没有账号？选择注册"
+            android:textColor="#777"
+            android:textSize="15sp" />
+
+        <TextView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+            android:text="请选择您的身份："
+            android:textSize="9pt" />
+         <RadioGroup
+             android:id="@+id/radioGroup"
+             android:contentDescription="性别"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+             <RadioButton
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/radioMale"
+                 android:text="游客"
+                 android:checked="true"></RadioButton>
+             <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:id="@+id/radioFemale"
+                 android:text="管理员"></RadioButton>
+         </RadioGroup>
+
         <Button
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="45dp"
             android:layout_marginRight="40dp"
             android:background="@drawable/login_btn"
             android:text="登入"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/register_login_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="230dp"
-            android:text="没有账号？选择注册"
-            android:textColor="#777"
-            android:textSize="15sp" />
 
     </LinearLayout>
 

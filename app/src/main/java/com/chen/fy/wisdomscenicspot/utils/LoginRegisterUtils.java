@@ -113,13 +113,14 @@ public class LoginRegisterUtils {
                 }
                 break;
             case 2:    //管理者
-                List<Manager> managers = LitePal.where("userId = ?", userId).find(Manager.class);
+
+               /* List<Manager> managers = LitePal.where("userId = ?", userId).find(Manager.class);
                 for (Manager manager : managers) {
                     //判断密码是否相同
                     if (manager.getPwHash().equals(getMD5(password + manager.getPwSalt()))) {
                         return true;
                     }
-                }
+                }*/
                 break;
         }
         Toast.makeText(MyApplication.getContext(), "用户名或密码错误", Toast.LENGTH_SHORT).show();

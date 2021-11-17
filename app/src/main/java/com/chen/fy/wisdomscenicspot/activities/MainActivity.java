@@ -6,10 +6,12 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
@@ -19,6 +21,7 @@ import android.widget.Toast;
 import com.chen.fy.wisdomscenicspot.R;
 import com.chen.fy.wisdomscenicspot.fragment.FoundFragment;
 import com.chen.fy.wisdomscenicspot.fragment.HomeFragment;
+import com.chen.fy.wisdomscenicspot.fragment.ManageFragment;
 import com.chen.fy.wisdomscenicspot.fragment.MineFragment;
 import com.chen.fy.wisdomscenicspot.services.BigDatesIntentServices;
 import com.chen.fy.wisdomscenicspot.utils.UiUtils;
@@ -31,9 +34,51 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     private HomeFragment homeFragment;
     private FoundFragment foundFragment;
     private MineFragment mineFragment;
+    private ManageFragment manageFragment;
 
     //登入的用户名
     public static String userId;
+    public int flag=0;
+
+    public int getFlag() {
+        return flag;
+    }
+
+    public void setFlag(int flag) {
+        this.flag = flag;
+    }
+
+
+
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Log.e("onNewIntent", "onNewIntent: ");
+        String statuCar = intent.getStringExtra("statuCar");
+        Toast.makeText(MainActivity.this,statuCar,Toast.LENGTH_LONG).show();
+        if (Integer.parseInt(statuCar)==1) {
+//
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_main, manageFragment).
+                        commitAllowingStateLoss();
+                flag=1;//flag=1代表管理员
+                //Toast.makeText(MainActivity.this,"执行了么2",Toast.LENGTH_LONG).show();
+
+           // Toast.makeText(MainActivity.this,"发生了啥啊",Toast.LENGTH_LONG).show();
+            Log.i("TAG", "initView: " + statuCar);
+        }
+       /* if (Integer.parseInt(statuCar)==2) {
+//
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_main, mineFragment).
+                    commitAllowingStateLoss();
+            flag=true;
+            //Toast.makeText(MainActivity.this,"执行了么2",Toast.LENGTH_LONG).show();
+
+            // Toast.makeText(MainActivity.this,"发生了啥啊",Toast.LENGTH_LONG).show();
+            Log.i("TAG", "initView: " + statuCar);
+        }
+*/
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +100,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         homeFragment = new HomeFragment();
         foundFragment = new FoundFragment();
         mineFragment = new MineFragment();
+        manageFragment = new ManageFragment();
 
         //第一次进入时显示home界面
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_main, homeFragment).
@@ -88,8 +134,40 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 transaction.commitAllowingStateLoss();
                 break;
             case R.id.mine_main:
-                transaction.replace(R.id.fragment_main, mineFragment);
-                transaction.commitAllowingStateLoss();
+                manageFragment.getFlag(new ManageFragment.CallBack(){
+                    @Override
+                    public  void getResult(int i)
+                    {
+                        if(i==3)//代表管理员页面没加载原变量
+                        {setFlag(0);}
+
+                        else if(i==2)//管理员页面进行
+                        {
+                            setFlag(1);
+                        }
+                        else if(i==0)//管理员页面退出
+                        {
+                            setFlag(0);
+                        }
+
+                    }
+                });
+
+
+               // Toast.makeText(MainActivity.this,Integer.toString(flag), Toast.LENGTH_LONG).show();
+                if(flag==0) {
+
+
+                    transaction.replace(R.id.fragment_main, mineFragment);
+                    transaction.commitAllowingStateLoss();
+                }
+                else if(flag==1)
+                {
+
+
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_main, manageFragment).
+                            commitAllowingStateLoss();
+                }
                 break;
         }
     }
@@ -99,6 +177,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         Intent intent = new Intent(MainActivity.this, LoginActivity.class);
         startActivityForResult(intent, 1);
     }
+
 
     /**
      * 动态申请危险权限
