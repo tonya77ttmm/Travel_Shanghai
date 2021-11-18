@@ -3,14 +3,14 @@
 
     <item
         android:id="@+id/town_target_location"
-        android:title="普贤塔" />
+        android:title="外滩" />
 
     <item
         android:id="@+id/rock_target_location"
-        android:title="象眼岩" />
+        android:title="南京路步行街" />
 
     <item
         android:id="@+id/ruins_target_location"
-        android:title="桂林抗战遗址" />
+        android:title="上海迪士尼度假区" />
 
 </menu>

@@ -196,16 +196,16 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
         sceneryInfo3.setNumber(124);
         sceneryInfo3.setDistance(28.31);
 
-        SceneryInfo sceneryInfo4 = new SceneryInfo();
+       /* SceneryInfo sceneryInfo4 = new SceneryInfo();
         sceneryInfo4.setName("象眼岩");
         sceneryInfo4.setAddress("五里桥");
         sceneryInfo4.setNumber(91);
-        sceneryInfo4.setDistance(27.55);
+        sceneryInfo4.setDistance(27.55);*/
 
         list.add(sceneryInfo1);
         list.add(sceneryInfo2);
         list.add(sceneryInfo3);
-        list.add(sceneryInfo4);
+        //list.add(sceneryInfo4);
     }
 
 
@@ -328,35 +328,35 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
             case "外滩":
                 if(getActivity()!=null) {
                     Intent intent = new Intent(getActivity(), MapActivity.class);
-                    intent.putExtra("Latitude",25.267088);
-                    intent.putExtra("Longitude",110.296427);
+                    intent.putExtra("Latitude",31.24166);
+                    intent.putExtra("Longitude",121.48612);
                     startActivity(intent);
                 }
                 break;
             case "南京路步行街":
                 if(getActivity()!=null) {
                     Intent intent = new Intent(getActivity(), MapActivity.class);
-                    intent.putExtra("Latitude",25.267242);
-                    intent.putExtra("Longitude",110.296046);
+                    intent.putExtra("Latitude", 31.23916);
+                    intent.putExtra("Longitude",121.47918);
                     startActivity(intent);
                 }
                 break;
-            case "东方明珠广播电视塔":
+            case "上海迪士尼度假区":
                 if(getActivity()!=null) {
                     Intent intent = new Intent(getActivity(), MapActivity.class);
-                    intent.putExtra("Latitude",25.266431);
-                    intent.putExtra("Longitude",110.295181);
+                    intent.putExtra("Latitude",31.083714);
+                    intent.putExtra("Longitude",121.392735);
                     startActivity(intent);
                 }
                 break;
-            case "田子坊":
+          /*  case "田子坊":
                 if(getActivity()!=null) {
                     Intent intent = new Intent(getActivity(), MapActivity.class);
                     intent.putExtra("Latitude",25.266559);
                     intent.putExtra("Longitude",110.295011);
                     startActivity(intent);
                 }
-                break;
+                break;*/
         }
     }
 

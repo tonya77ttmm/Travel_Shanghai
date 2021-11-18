@@ -89,7 +89,7 @@ public class MapActivity extends AppCompatActivity {
     private MyOnClickListener myOnClickListener;
 
     /**
-     * 部分景点的人数,普贤塔,桂林抗战遗址,象眼岩
+     * 部分景点的人数,普贤塔,上海迪士尼度假区,南京路步行街
      */
     private int[] numbers = new int[3];
     private String[] locations = new String[3];
@@ -130,8 +130,8 @@ public class MapActivity extends AppCompatActivity {
      * 各个景点的Maker
      */
     private Marker marker1;   //普贤塔
-    private Marker marker2;   //桂林抗战遗址
-    private Marker marker3;   //象眼岩
+    private Marker marker2;   //上海迪士尼度假区
+    private Marker marker3;   //南京路步行街
     private Circle circle1;
     private Circle circle2;
     private Circle circle3;
@@ -313,7 +313,7 @@ public class MapActivity extends AppCompatActivity {
     }
 
     /**
-     * 绘制点标记,普贤塔，桂林抗战遗址，象眼岩
+     * 绘制点标记,普贤塔，上海迪士尼度假区，南京路步行街
      */
     private void drawMarker() {
         //Marker点击接口
@@ -342,19 +342,19 @@ public class MapActivity extends AppCompatActivity {
         };
 
         // 1 普贤塔
-        LatLng latLng1 = new LatLng(25.267242, 110.296046);
+        LatLng latLng1 = new LatLng(31.24166,121.48612  );
         marker1 = aMap.addMarker(new MarkerOptions().
-                position(latLng1).title("普贤塔").snippet("人流量：10").visible(true));
+                position(latLng1).title("外滩").snippet("人流量：10").visible(true));
 
-        // 2 象眼岩
-        LatLng latLng2 = new LatLng(25.267088, 110.296427);
+        // 2 南京路步行街
+        LatLng latLng2 = new LatLng(31.23916,121.47918 );
         marker2 = aMap.addMarker(new MarkerOptions().
-                position(latLng2).title("象眼岩").snippet("人流量：30").visible(true));
+                position(latLng2).title("南京路步行街").snippet("人流量：30").visible(true));
 
-        // 2 桂林抗战遗址
-        LatLng latLng3 = new LatLng(25.266798, 110.295988);
+        // 2 上海迪士尼度假区
+        LatLng latLng3 = new LatLng(31.083714, 121.392735);
         marker3 = aMap.addMarker(new MarkerOptions().
-                position(latLng3).title("桂林抗战遗址").snippet("人流量：20").visible(true));
+                position(latLng3).title("上海迪士尼度假区").snippet("人流量：20").visible(true));
         //设置接口
         aMap.setOnMarkerClickListener(markerClickListener);
         aMap.setOnInfoWindowClickListener(infoWindowClickListener);
@@ -372,79 +372,79 @@ public class MapActivity extends AppCompatActivity {
         switch (AStarUtils.A_star(numbers, myLocation, targetLocation)) {
             case RoadPlanningUtils.ROAD_1:
                 RoadPlanningUtils.zxToTown_road1(latLngs);
-                end = "普贤塔";
+                end = "外滩";
                 break;
             case RoadPlanningUtils.ROAD_2:
                 RoadPlanningUtils.zxToTown_road2(latLngs);
-                end = "普贤塔";
+                end = "外滩";
                 break;
             case RoadPlanningUtils.ROAD_3:
                 RoadPlanningUtils.zxToTown_road3(latLngs);
-                end = "普贤塔";
+                end = "外滩";
                 break;
             case RoadPlanningUtils.ROAD_4:
                 RoadPlanningUtils.zxToRock_road1(latLngs);
-                end = "象眼岩";
+                end = "南京路步行街";
                 break;
             case RoadPlanningUtils.ROAD_5:
                 RoadPlanningUtils.zxToRock_road2(latLngs);
-                end = "象眼岩";
+                end = "南京路步行街";
                 break;
             case RoadPlanningUtils.ROAD_6:
                 RoadPlanningUtils.zxToRock_road3(latLngs);
-                end = "象眼岩";
+                end = "南京路步行街";
                 break;
             case RoadPlanningUtils.ROAD_7:
                 RoadPlanningUtils.zxToRuins_road1(latLngs);
-                end = "桂林抗战遗址";
+                end = "上海迪士尼度假区";
                 break;
             case RoadPlanningUtils.ROAD_8:
                 RoadPlanningUtils.yfsToTown_road1(latLngs);
-                end = "普贤塔";
+                end = "外滩";
                 break;
             case RoadPlanningUtils.ROAD_9:
                 RoadPlanningUtils.yfsToTown_road3(latLngs);
-                end = "普贤塔";
+                end = "外滩";
                 break;
             case RoadPlanningUtils.ROAD_10:
                 RoadPlanningUtils.yfsToRock_road1(latLngs);
-                end = "象眼岩";
+                end = "南京路步行街";
                 break;
             case RoadPlanningUtils.ROAD_11:
                 RoadPlanningUtils.yfsToRock_road2(latLngs);
-                end = "象眼岩";
+                end = "南京路步行街";
                 break;
             case RoadPlanningUtils.ROAD_12:
                 RoadPlanningUtils.yfsToRock_road3(latLngs);
-                end = "象眼岩";
+                end = "南京路步行街";
                 break;
             case RoadPlanningUtils.ROAD_13:
                 RoadPlanningUtils.yfsToRuins_road1(latLngs);
-                end = "桂林抗战遗址";
+                end = "上海迪士尼度假区";
                 break;
             case RoadPlanningUtils.ROAD_14:
                 RoadPlanningUtils.zyToTown_road1(latLngs);
-                end = "普贤塔";
+                end = "外滩";
                 break;
             case RoadPlanningUtils.ROAD_15:
                 RoadPlanningUtils.zyToRock_road1(latLngs);
-                end = "象眼岩";
+                end = "南京路步行街";
                 break;
             case RoadPlanningUtils.ROAD_16:
                 RoadPlanningUtils.zyToRock_road2(latLngs);
-                end = "象眼岩";
+                end = "南京路步行街";
                 break;
             case RoadPlanningUtils.ROAD_17:
                 RoadPlanningUtils.zyToRock_road3(latLngs);
-                end = "象眼岩";
+                end = "南京路步行街";
                 break;
             case RoadPlanningUtils.ROAD_18:
                 RoadPlanningUtils.zyToRuins_road1(latLngs);
-                end = "桂林抗战遗址";
+                end = "上海迪士尼度假区";
                 break;
             case RoadPlanningUtils.ROAD_19:
                 RoadPlanningUtils.zyToRuins_road3(latLngs);
-                end = "桂林抗战遗址";
+                end = "上海迪士尼度假区";
                 break;
             default:
                 Toast.makeText(this, "输入错误...", Toast.LENGTH_SHORT).show();
@@ -478,13 +478,13 @@ public class MapActivity extends AppCompatActivity {
         LatLng latLng_start = points.get(0);
         LatLng latLng_end = points.get(points.size() - 1);
         switch (end) {
-            case "普贤塔":
+            case "外滩":
                 marker1.setVisible(false);
                 break;
-            case "象眼岩":
+            case "南京路步行街":
                 marker3.setVisible(false);
                 break;
-            case "桂林抗战遗址":
+            case "上海迪士尼度假区":
                 marker2.setVisible(false);
                 break;
         }
@@ -567,7 +567,7 @@ public class MapActivity extends AppCompatActivity {
                         .fillColor(Color.argb(circleNumber, 255, 0, 0))
                         .strokeColor(Color.argb(0, 0, 0, 0)));
                 break;
-            case "rock":            //象眼岩
+            case "rock":            //南京路步行街
                 marker2.setSnippet("人流量：" + number);
 
                 if (circle2 != null) {
@@ -581,7 +581,7 @@ public class MapActivity extends AppCompatActivity {
                         .strokeColor(Color.argb(0, 0, 0, 0)));
 
                 break;
-            case "ruins":       //桂林抗战遗址
+            case "ruins":       //上海迪士尼度假区
                 marker3.setSnippet("人流量：" + number);
 
                 if (circle3 != null) {
@@ -653,13 +653,13 @@ public class MapActivity extends AppCompatActivity {
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.zx_my_location:
-                        ed_myLocation.setText("醉乡");
+                        ed_myLocation.setText("上海人民广场");
                         break;
                     case R.id.yfs_my_location:
-                        ed_myLocation.setText("云峰寺");
+                        ed_myLocation.setText("静安寺");
                         break;
                     case R.id.zy_my_location:
-                        ed_myLocation.setText("象山钟韵");
+                        ed_myLocation.setText("上海图书馆");
                         break;
                 }
                 return true;
@@ -695,13 +695,13 @@ public class MapActivity extends AppCompatActivity {
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.town_target_location:
-                        ed_targetLocation.setText("普贤塔");
+                        ed_targetLocation.setText("外滩");
                         break;
                     case R.id.rock_target_location:
-                        ed_targetLocation.setText("象眼岩");
+                        ed_targetLocation.setText("南京路步行街");
                         break;
                     case R.id.ruins_target_location:
-                        ed_targetLocation.setText("桂林抗战遗址");
+                        ed_targetLocation.setText("上海迪士尼度假区");
                         break;
                 }
                 return true;
@@ -1020,13 +1020,13 @@ public class MapActivity extends AppCompatActivity {
                 switch (bleDevice.getName()) {
                     //case "1836242":
                     case "1836072":       //1836242", "1836157", "1836027
-                        startPushScenic(bleDevice.getRssi(), "狮岭朝霞");
+                        startPushScenic(bleDevice.getRssi(), "正大乐城");
                         break;
                     case "1836157":
-                        startPushScenic(bleDevice.getRssi(), "水晶宫");
+                        startPushScenic(bleDevice.getRssi(), "龙华寺");
                         break;
                     case "1836032":
-                        startPushScenic(bleDevice.getRssi(), "红罗宝帐");
+                        startPushScenic(bleDevice.getRssi(), "西岸艺术中心");
                         break;
                 }
             }
@@ -1111,13 +1111,13 @@ public class MapActivity extends AppCompatActivity {
             navigateTo(25.266416, 110.295621);  //醉乡
         }
         switch (end) {
-            case "普贤塔":
+            case "外滩":
                 marker1.setVisible(true);
                 break;
-            case "象眼岩":
+            case "南京路步行街":
                 marker3.setVisible(true);
                 break;
-            case "桂林抗战遗址":
+            case "上海迪士尼度假区":
                 marker2.setVisible(true);
                 break;
         }
@@ -1166,3 +1166,4 @@ public class MapActivity extends AppCompatActivity {
 
 
 }
+
