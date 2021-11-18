@@ -113,10 +113,9 @@ public class HomeActivity extends AppCompatActivity implements OnChildClickListe
             case R.id.submit:
                Toast.makeText(this, "提交成功", Toast.LENGTH_SHORT).show();
                 Intent intent1 = new Intent(this, PlanTravelRoute.class);
+//                PlanTravelRoute Plan = null;
+//                Plan.line(1);
                 startActivity(intent1);
-                PlanTravelRoute Plan = null;
-                Plan.line(1);
-
                 finish();
                 return true;
             default:

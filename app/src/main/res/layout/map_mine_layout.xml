@@ -12,7 +12,7 @@
         android:layout_height="?attr/actionBarSize"
         android:fitsSystemWindows="true"
         app:navigationIcon="@drawable/return_logo"
-        app:title="离线地图"
+        app:title="我的循迹"
         app:titleTextAppearance="@style/Toolbar.TitleText"
         app:titleTextColor="#666" />
 
@@ -25,7 +25,13 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="624dp"
-        android:text="TextView" />
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:password="false"
+        android:text="    路线一：1. 东方明珠电视塔 -> 2. 百年历史陈列馆 -> 3. 参观世博园中国馆 -> 4. 逛城隍庙 -> 5. 外滩 -> 6. 南京路步行街"
+        android:textSize="20sp" />
 
 
 </LinearLayout>

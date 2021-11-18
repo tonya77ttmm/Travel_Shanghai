@@ -98,9 +98,9 @@
                     android:layout_width="0dp"
                     android:layout_height="80dp"
                     android:layout_weight="1"
-                    android:drawableTop="@drawable/weather_logo"
+                    android:drawableTop="@drawable/sos"
                     android:gravity="center"
-                    android:text="实时天气"
+                    android:text="紧急求助"
                     android:textColor="#333"
                     android:textSize="14sp" />
 

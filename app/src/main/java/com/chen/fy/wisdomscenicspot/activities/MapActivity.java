@@ -243,8 +243,8 @@ public class MapActivity extends AppCompatActivity {
         //设置地图的放缩级别
         // aMap.moveCamera(CameraUpdateFactory.zoomTo(20));
         if (getIntent() != null) {
-            double latitude = getIntent().getDoubleExtra("Latitude", 25.266431);
-            double longitude = getIntent().getDoubleExtra("Longitude", 110.295181);
+            double latitude = getIntent().getDoubleExtra("Latitude", 40.0615841);
+            double longitude = getIntent().getDoubleExtra("Longitude", 116.086286);
             navigateTo(latitude, longitude);
         }
         aMap.showIndoorMap(true);
@@ -1162,5 +1162,7 @@ public class MapActivity extends AppCompatActivity {
         //在activity执行onSaveInstanceState时执行mMapView.onSaveInstanceState (outState)，保存地图当前的状态
         mMapView.onSaveInstanceState(outState);
     }
+
+
 
 }

@@ -52,19 +52,19 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
 
     //图片id
     private int[] imagesId = {
-            R.drawable.elephant_hill,
-            R.drawable.sjg,
-            R.drawable.slzx,
-            R.drawable.bsh,
-            R.drawable.px_town
+            R.drawable.yt,
+            R.drawable.dsn,
+            R.drawable.dgy,
+            R.drawable.df,
+            R.drawable.yy
     };
     //图片标题
     public static String[] imagesTitle = {
-            "象鼻山",
-            "水晶宫",
-            "狮岭朝霞",
-            "八路军桂林办事处纪念馆",
-            "普贤塔"
+            "上海外滩",
+            "上海迪士尼乐园",
+            "大观园",
+            "东方明珠广播电视塔",
+            "上海豫园"
     };
 
     //图片集合

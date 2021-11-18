@@ -117,7 +117,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             saveLoginState(userId);
             finish();
         }
-        else if ((loginType2==2)&&userId.equals("wty")&&password.equals("wty"))
+        else if ((loginType2==2)&&userId.equals("wooden")&&password.equals("A1842"))
         {
             Intent mIntent = new Intent(this, MainActivity.class);
             mIntent.putExtra("statuCar", "1");
