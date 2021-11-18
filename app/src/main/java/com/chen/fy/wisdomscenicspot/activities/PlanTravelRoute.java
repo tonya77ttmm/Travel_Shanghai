@@ -55,8 +55,6 @@ public class PlanTravelRoute extends AppCompatActivity {
 
         //初始化view并设置接口
         initView(savedInstanceState);
-
-
         //申请权限
         requestLocation();
         Object[][] plan=line(1);
