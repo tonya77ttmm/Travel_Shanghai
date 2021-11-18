@@ -14,6 +14,7 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.chen.fy.wisdomscenicspot.R;
 
@@ -23,6 +24,15 @@ public class ExpandAdapter extends BaseExpandableListAdapter {
     private LayoutInflater mInflater = null;
     private String[]   mGroupStrings = null;
     private List<List<Item>>   mData = null;
+    public String getDaynum() {
+        return daynum;
+    }
+
+    public void setDaynum(String daynum) {
+        this.daynum = daynum;
+    }
+
+    private String daynum;
 
     public ExpandAdapter(Context ctx, List<List<Item>> list) {
         mContext = ctx;
@@ -126,6 +136,11 @@ public class ExpandAdapter extends BaseExpandableListAdapter {
                 if(!isChecked)
                 {
                     mData.get(groupPosition).get(childPosition).isChecked = true;
+                    if(groupPosition==3)
+                    {
+                        setDaynum(name);
+                        Toast.makeText(mContext, name, Toast.LENGTH_SHORT).show();
+                    }
                     // checked.add(mData.get(groupPosition).get(childPosition));
 
                 }else

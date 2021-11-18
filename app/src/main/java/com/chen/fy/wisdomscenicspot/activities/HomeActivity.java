@@ -31,6 +31,8 @@ public class HomeActivity extends AppCompatActivity implements OnChildClickListe
     private ExpandAdapter mAdapter = null;
     private List<List<Item>> mData = new ArrayList<List<Item>>();
 
+
+
     private int[] mGroupArrays = new int[] {
 
             R.array.tianlongbabu,
@@ -113,8 +115,21 @@ public class HomeActivity extends AppCompatActivity implements OnChildClickListe
             case R.id.submit:
                Toast.makeText(this, "提交成功", Toast.LENGTH_SHORT).show();
                 Intent intent1 = new Intent(this, PlanTravelRoute.class);
+                 String day=mAdapter.getDaynum();
                 PlanTravelRoute Plan = null;
-                Plan.day=1;
+                 if(day=="一天"){
+                     Plan.day=1;
+                 }
+                 else if(day=="两天")
+                 {
+                     Plan.day=2;
+                 }
+                 else if(day=="三天")
+                 {
+                     Plan.day=3;
+                 }
+
+
                 startActivity(intent1);
                 finish();
                 return true;

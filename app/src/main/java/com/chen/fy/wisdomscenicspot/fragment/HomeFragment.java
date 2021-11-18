@@ -179,26 +179,26 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
             list.clear();
         }
         SceneryInfo sceneryInfo1 = new SceneryInfo();
-        sceneryInfo1.setName("象鼻山");
-        sceneryInfo1.setAddress("广西省桂林市象山景区");
+        sceneryInfo1.setName("外滩");
+        sceneryInfo1.setAddress("黄浦区中山东一路");
         sceneryInfo1.setNumber(550);
         sceneryInfo1.setDistance(30.15);
 
         SceneryInfo sceneryInfo2 = new SceneryInfo();
-        sceneryInfo2.setName("普贤塔");
-        sceneryInfo2.setAddress("广西省桂林市象山景区");
+        sceneryInfo2.setName("南京路步行街");
+        sceneryInfo2.setAddress("南京东路558号");
         sceneryInfo2.setNumber(325);
         sceneryInfo2.setDistance(29.11);
 
         SceneryInfo sceneryInfo3 = new SceneryInfo();
-        sceneryInfo3.setName("太平天国纪念馆");
-        sceneryInfo3.setAddress("广西省桂林市象山景区");
+        sceneryInfo3.setName("上海迪士尼度假区");
+        sceneryInfo3.setAddress("浦东新区世纪大道1号");
         sceneryInfo3.setNumber(124);
         sceneryInfo3.setDistance(28.31);
 
         SceneryInfo sceneryInfo4 = new SceneryInfo();
-        sceneryInfo4.setName("云峰寺");
-        sceneryInfo4.setAddress("广西省桂林市象山景区");
+        sceneryInfo4.setName("象眼岩");
+        sceneryInfo4.setAddress("五里桥");
         sceneryInfo4.setNumber(91);
         sceneryInfo4.setDistance(27.55);
 
@@ -325,7 +325,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
     @Override
     public void onItemClick(int position) {
         switch (list.get(position).getName()){
-            case "象鼻山":
+            case "外滩":
                 if(getActivity()!=null) {
                     Intent intent = new Intent(getActivity(), MapActivity.class);
                     intent.putExtra("Latitude",25.267088);
@@ -333,7 +333,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
                     startActivity(intent);
                 }
                 break;
-            case "普贤塔":
+            case "南京路步行街":
                 if(getActivity()!=null) {
                     Intent intent = new Intent(getActivity(), MapActivity.class);
                     intent.putExtra("Latitude",25.267242);
@@ -341,7 +341,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
                     startActivity(intent);
                 }
                 break;
-            case "太平天国纪念馆":
+            case "东方明珠广播电视塔":
                 if(getActivity()!=null) {
                     Intent intent = new Intent(getActivity(), MapActivity.class);
                     intent.putExtra("Latitude",25.266431);
@@ -349,7 +349,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
                     startActivity(intent);
                 }
                 break;
-            case "云峰寺":
+            case "田子坊":
                 if(getActivity()!=null) {
                     Intent intent = new Intent(getActivity(), MapActivity.class);
                     intent.putExtra("Latitude",25.266559);

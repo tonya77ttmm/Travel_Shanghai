@@ -68,8 +68,9 @@
     </string-array>
 
     <string-array name="tijiaoshijian">
-        <item>半天</item>
         <item>一天</item>
+        <item>两天</item>
+        <item>三天</item>
 
     </string-array>
 
