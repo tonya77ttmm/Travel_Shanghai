@@ -48,7 +48,7 @@ public class PlanTravelRoute extends AppCompatActivity {
     private Marker marker1;   //普贤塔
     private Marker marker2;   //桂林抗战遗址
     private Marker marker3;   //象眼岩
-
+    float day=0;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.plan_travel_route);
@@ -57,7 +57,7 @@ public class PlanTravelRoute extends AppCompatActivity {
         initView(savedInstanceState);
         //申请权限
         requestLocation();
-        Object[][] plan=line(1);
+        Object[][] plan=line();
         //绘制Marker
         myMarker(plan);
 
@@ -73,7 +73,7 @@ public class PlanTravelRoute extends AppCompatActivity {
         mMapView.onCreate(savedInstanceState);
 
     }
-    public Object[][] line(float day) {
+    public Object[][] line() {
 
     Object[][] plan = Plan.plan_travel(day);
         String tline = null;
