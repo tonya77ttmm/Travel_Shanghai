@@ -8,7 +8,7 @@
 
 
 
-    <RadioButton
+    <CheckBox
         android:layout_height="wrap_content"
         android:id="@+id/item_name"
         android:layout_width="match_parent"/>
