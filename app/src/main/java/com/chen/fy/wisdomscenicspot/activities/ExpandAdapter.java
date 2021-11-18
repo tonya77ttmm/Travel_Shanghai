@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -96,24 +97,74 @@ public class ExpandAdapter extends BaseExpandableListAdapter {
     }
 
     @Override
+    public View getChildView(final int groupPosition, final int childPosition,
+                             boolean isLastChild, View convertView, ViewGroup parent) {
+        // TODO Auto-generated method stub
+        ChildViewHolder holder=null;
+        if (convertView == null) {
+            holder=new ChildViewHolder();
+            convertView = mInflater.inflate(R.layout.child_item_layout, null);
+            holder.mChildName = (CheckBox) convertView.findViewById(R.id.item_name);
+            convertView.setTag(holder);
+        }
+        else {
+            holder = (ChildViewHolder)  convertView.getTag();
+        }
+
+
+        holder.mChildName.setText(getChild(groupPosition, childPosition)
+                .getName());
+
+        holder.mChildName.setChecked(mData.get(groupPosition).get(childPosition).isChecked);
+        holder.mChildName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                boolean isChecked= mData.get(groupPosition).get(childPosition).isChecked;
+                String name=mData.get(groupPosition).get(childPosition).getName();
+
+                if(!isChecked)
+                {
+                    mData.get(groupPosition).get(childPosition).isChecked = true;
+                    // checked.add(mData.get(groupPosition).get(childPosition));
+
+                }else
+                {
+                    mData.get(groupPosition).get(childPosition).isChecked = false;
+                }
+
+
+            }
+
+
+        });
+
+        return convertView;
+    }
+
+   /* @Override
     public View getChildView(int groupPosition, int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
         // TODO Auto-generated method stub
+        ChildViewHolder holder=null;
         if (convertView == null) {
+            holder=new ChildViewHolder();
             convertView = mInflater.inflate(R.layout.child_item_layout, null);
+            holder.mChildName = (CheckBox) convertView.findViewById(R.id.item_name);
+            convertView.setTag(holder);
         }
-        ChildViewHolder holder = new ChildViewHolder();
-        //holder.mIcon = (ImageView) convertView.findViewById(R.id.img);
-        //holder.mIcon.setBackgroundResource(getChild(groupPosition,
-        //      childPosition).getImageId());
-        holder.mChildName = (RadioButton) convertView.findViewById(R.id.item_name);
+        else {
+            holder = (ChildViewHolder)  convertView.getTag();
+        }
+
+
         holder.mChildName.setText(getChild(groupPosition, childPosition)
                 .getName());
-        /*holder.mDetail = (TextView) convertView.findViewById(R.id.item_detail);
-        holder.mDetail.setText(getChild(groupPosition, childPosition)
-                .getDetail());*/
+        holder.mChildName.setChecked(mData.get(groupPosition).get(childPosition).isChecked);
+
+
         return convertView;
-    }
+    }*/
 
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
@@ -131,7 +182,7 @@ public class ExpandAdapter extends BaseExpandableListAdapter {
         //ImageView mIcon;
         //TextView mChildName;
         //TextView mDetail;
-        RadioButton  mChildName;
+        CheckBox  mChildName;
     }
 
 }
