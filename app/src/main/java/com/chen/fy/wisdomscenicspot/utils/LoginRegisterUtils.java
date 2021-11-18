@@ -87,7 +87,7 @@ public class LoginRegisterUtils {
                 }
                 break;
         }
-        Toast.makeText(MyApplication.getContext(), "此用户名不存在", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(MyApplication.getContext(), "此用户名不存在", Toast.LENGTH_SHORT).show();
         return false;
     }
 

@@ -36,7 +36,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="30dp"
-                android:src="@drawable/main_logo_login"
+                android:src="@mipmap/tower"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
@@ -103,11 +103,15 @@
         <TextView
            android:layout_width="fill_parent"
            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="10dp"
             android:text="请选择您的身份："
-            android:textSize="9pt" />
+            android:textSize="7pt" />
          <RadioGroup
              android:id="@+id/radioGroup"
-             android:contentDescription="性别"
+             android:contentDescription="角色"
+             android:layout_marginLeft="45dp"
+             android:layout_marginTop="10dp"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content">
              <RadioButton
@@ -128,7 +132,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginLeft="40dp"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="35dp"
             android:layout_marginRight="40dp"
             android:background="@drawable/login_btn"
             android:text="登入"

@@ -34,7 +34,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="12dp"
-        android:text="go to the hell"
+        android:text="Have a good day!"
         android:textColor="@color/my_hint"/>
 
 </LinearLayout>

@@ -56,28 +56,17 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         super.onNewIntent(intent);
         Log.e("onNewIntent", "onNewIntent: ");
         String statuCar = intent.getStringExtra("statuCar");
-        Toast.makeText(MainActivity.this,statuCar,Toast.LENGTH_LONG).show();
+
         if (Integer.parseInt(statuCar)==1) {
 //
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_main, manageFragment).
                         commitAllowingStateLoss();
                 flag=1;//flag=1代表管理员
-                //Toast.makeText(MainActivity.this,"执行了么2",Toast.LENGTH_LONG).show();
 
-           // Toast.makeText(MainActivity.this,"发生了啥啊",Toast.LENGTH_LONG).show();
             Log.i("TAG", "initView: " + statuCar);
         }
-       /* if (Integer.parseInt(statuCar)==2) {
-//
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_main, mineFragment).
-                    commitAllowingStateLoss();
-            flag=true;
-            //Toast.makeText(MainActivity.this,"执行了么2",Toast.LENGTH_LONG).show();
 
-            // Toast.makeText(MainActivity.this,"发生了啥啊",Toast.LENGTH_LONG).show();
-            Log.i("TAG", "initView: " + statuCar);
-        }
-*/
+
     }
 
     @Override

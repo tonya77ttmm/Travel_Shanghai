@@ -52,14 +52,14 @@ public class FoundFragment extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.chongqi_cd:
-                Intent intent1 = new Intent(getActivity(), ViewPointActivity.class);
-                intent1.putExtra("目的地","重庆");
-                startActivity(intent1);
+                //Intent intent1 = new Intent(getActivity(), ViewPointActivity.class);
+               // intent1.putExtra("目的地","重庆");
+                //startActivity(intent1);
                 break;
             case R.id.shanghai_cd:
-                Intent intent2 = new Intent(getActivity(), ViewPointActivity.class);
-                intent2.putExtra("目的地","上海");
-                startActivity(intent2);
+               // Intent intent2 = new Intent(getActivity(), ViewPointActivity.class);
+                //intent2.putExtra("目的地","上海");
+                //startActivity(intent2);
                 break;
             case R.id.beijing_cd:
                 break;

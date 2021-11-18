@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             public void onCheckedChanged(RadioGroup arg0, int arg1) {
                 int radioButtonId =arg0.getCheckedRadioButtonId();
                 String a=Integer.toString(radioButtonId);
-                Toast.makeText(LoginActivity.this, a, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(LoginActivity.this, a, Toast.LENGTH_SHORT).show();
                 //根据ID获取RadioButton的实例
                 RadioButton rb = (RadioButton)findViewById(radioButtonId);
                 setLogintype(rb.getText().toString());
@@ -107,7 +107,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             if (s.equals("管理员")) {
                 loginType2 = 2;
             }
-            Toast.makeText(LoginActivity.this, Integer.toString(loginType2), Toast.LENGTH_LONG).show();
+            //Toast.makeText(LoginActivity.this, Integer.toString(loginType2), Toast.LENGTH_LONG).show();
         }
 
         //用户名存在且密码与用户名对应
@@ -119,6 +119,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
         else if ((loginType2==2)&&userId.equals("wooden")&&password.equals("A1842"))
         {
+            Toast.makeText(LoginActivity.this, "登入成功!", Toast.LENGTH_SHORT).show();
             Intent mIntent = new Intent(this, MainActivity.class);
             mIntent.putExtra("statuCar", "1");
             startActivity(mIntent);
